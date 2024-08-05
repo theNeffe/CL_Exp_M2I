@@ -3,8 +3,8 @@ from avalanche.benchmarks.utils import AvalancheTensorDataset
 from sklearn.model_selection import train_test_split
 from torchvision.transforms import Resize, Compose, ToTensor, RandomCrop, Normalize
 
-from paths import DATA_PATH
-from scenarios.utils import transform_from_gray_to_rgb, load_dataset
+# from paths import DATA_PATH
+from utils import transform_from_gray_to_rgb, load_dataset
 
 transform_not_resize = Compose([
     RandomCrop(105, padding=4),
