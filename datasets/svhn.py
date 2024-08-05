@@ -1,8 +1,8 @@
 from avalanche.benchmarks.datasets import SVHN
 from torchvision.transforms import ToTensor, Resize, Compose
 
-from paths import DATA_PATH
-from scenarios.utils import load_dataset
+# from paths import DATA_PATH
+from utils import load_dataset
 
 
 def _load_svhn(split: str, transform):
