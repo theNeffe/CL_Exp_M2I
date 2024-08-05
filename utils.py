@@ -4,11 +4,11 @@ from typing import List, Tuple, Callable, Optional
 
 from avalanche.benchmarks.utils import AvalancheDataset 
 #, AvalancheTensorDataset
-from avalanche.benchmarks.utils.dataset_utils import ClassificationSubset
+# from avalanche.benchmarks.utils.dataset_utils import ClassificationSubset
 from torchvision.transforms import transforms
 
 
-def _filter_classes_in_single_dataset(dataset, classes):
+"""def _filter_classes_in_single_dataset(dataset, classes):
     indices = [i for i, t in enumerate(dataset.targets) if t in classes]
     max_class = max(classes)
     class_mapping = [-1] * (max_class + 1)
@@ -16,7 +16,7 @@ def _filter_classes_in_single_dataset(dataset, classes):
         class_mapping[c] = i
 
     return AvalancheDataset(ClassificationSubset(dataset, indices, class_mapping=class_mapping))
-
+"""
 
 def filter_classes(train_dataset, test_dataset, classes):
     return _filter_classes_in_single_dataset(train_dataset, classes), _filter_classes_in_single_dataset(test_dataset,
