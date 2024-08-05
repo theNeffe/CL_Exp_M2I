@@ -2,7 +2,8 @@ import math
 from collections import defaultdict
 from typing import List, Tuple, Callable, Optional
 
-from avalanche.benchmarks.utils import AvalancheDataset, AvalancheTensorDataset
+from avalanche.benchmarks.utils import AvalancheDataset 
+#, AvalancheTensorDataset
 from avalanche.benchmarks.utils.dataset_utils import ClassificationSubset
 from torchvision.transforms import transforms
 
@@ -38,7 +39,7 @@ def transform_from_gray_to_rgb():
     return transforms.Lambda(lambda x: x.repeat(3, 1, 1) if x.size(0) == 1 else x)
 
 
-def balance_dataset(dataset, transform, number_of_samples_per_class=None):
+"""def balance_dataset(dataset, transform, number_of_samples_per_class=None):
     img_occurrences = defaultdict(lambda: 0)
     X = []
     y = []
@@ -53,7 +54,7 @@ def balance_dataset(dataset, transform, number_of_samples_per_class=None):
         if all(i == number_of_samples_per_class for i in img_occurrences): break
 
     return AvalancheTensorDataset(X, y, transform=transform)
-
+"""
 
 def load_dataset(dataset_loader: Callable[[Optional[Callable]], AvalancheDataset], transform: Optional[Callable],
                  balanced: bool, number_of_samples_per_class=None):
