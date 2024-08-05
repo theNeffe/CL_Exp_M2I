@@ -1,8 +1,8 @@
 from avalanche.benchmarks.datasets import FashionMNIST
 from torchvision.transforms import Compose, RandomCrop, ToTensor, Normalize, Resize
 
-from paths import DATA_PATH
-from scenarios.utils import transform_from_gray_to_rgb, load_dataset
+# from paths import DATA_PATH
+from utils import transform_from_gray_to_rgb, load_dataset
 
 train_transform_with_resize = Compose([
     ToTensor(),
