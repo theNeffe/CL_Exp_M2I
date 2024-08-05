@@ -1,7 +1,7 @@
 from avalanche.benchmarks.datasets import TinyImagenet
 from torchvision.transforms import Resize, Compose, ToTensor
 
-from paths import DATA_PATH
+# from paths import DATA_PATH
 from scenarios.utils import load_dataset
 
 
