@@ -2,7 +2,7 @@ from avalanche.benchmarks.datasets import CIFAR10
 from torchvision.transforms import Resize, Compose, ToTensor, RandomCrop, Normalize
 
 from paths import DATA_PATH
-from scenarios.utils import load_dataset
+from utils import load_dataset
 
 train_transform = Compose([
     RandomCrop(32, padding=4),
