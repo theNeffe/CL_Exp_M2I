@@ -2,7 +2,7 @@ from avalanche.benchmarks.datasets import MNIST
 from torchvision.transforms import Compose, RandomCrop, ToTensor, Normalize, Resize
 
 # from paths import DATA_PATH
-from scenarios.utils import balance_dataset, load_dataset, transform_from_gray_to_rgb
+from utils import balance_dataset, load_dataset, transform_from_gray_to_rgb
 
 train_transform = Compose([
     RandomCrop(32, padding=4),
